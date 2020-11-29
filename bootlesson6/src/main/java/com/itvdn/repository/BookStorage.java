@@ -3,6 +3,7 @@ package com.itvdn.repository;
 import com.itvdn.model.Book;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +44,10 @@ public class BookStorage {
             book = books.get(id);
         }
         return book;
+    }
+
+    public Collection<Book> getBooks() {
+        return books.values();
     }
 
     public long getBooksNumber() {
